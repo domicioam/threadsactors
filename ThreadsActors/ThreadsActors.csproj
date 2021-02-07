@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Actors\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Akka" Version="1.4.16" />
   </ItemGroup>
 
