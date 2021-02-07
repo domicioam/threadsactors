@@ -49,8 +49,11 @@ namespace ThreadsActors.Threads
 
         private void DoWork()
         {
-            int value = this.counter.GetValue();
-            this.counter.IncrementBy(1);
+            lock (this.counter)
+            {
+                int value = this.counter.GetValue();
+                this.counter.IncrementBy(1);
+            }
         }
     }
 }
