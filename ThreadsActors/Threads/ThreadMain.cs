@@ -11,8 +11,6 @@ namespace ThreadsActors.Threads
         Counter counter;
         public void Execute()
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             while (true)
             {
                 this.counter = new Counter();
@@ -47,8 +45,6 @@ namespace ThreadsActors.Threads
                 t9.Join();
                 Debug.Assert(9 == this.counter.GetValue());
             }
-
-            stopwatch.Stop();
         }
 
         private void DoWork()
