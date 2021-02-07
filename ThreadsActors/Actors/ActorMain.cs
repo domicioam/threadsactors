@@ -25,7 +25,7 @@ namespace ThreadsActors.Actors
 
         public void Execute()
         {
-            while (true)
+            while (true) // can't have infinte loop, will prevent receiving future messages
             {
                 this.counterActor = Context.ActorOf<CounterActor>();
 
